@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack(spacing: 20) {
+                Button(action: {}) {
+                    NavigationLink(destination: ImageInteractionView()) {
+                        Text("See Image Interaction View")
+                            .padding()
+                            .fontWeight(.bold)
+                            .frame(maxWidth: 280)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                }
+            }
+            .padding()
+            .navigationTitle("swiftUIPlaygrounds")
         }
-        .padding()
     }
 }
 
