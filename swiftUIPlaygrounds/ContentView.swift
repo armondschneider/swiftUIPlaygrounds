@@ -38,6 +38,19 @@ struct ContentView: View {
                     }
                 }
                 
+                // RealisticDropShadowView
+                Button(action: {}) {
+                    NavigationLink(destination: RealisticDropShadowView()) {
+                        Text("Realistic Drop Shadow View")
+                            .padding()
+                            .fontWeight(.bold)
+                            .frame(maxWidth: 280)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                }
+                
                 Link("Just some fun interactions made by Armond Schneider",
                       destination: URL(string: "https://www.threads.net/@armondme")!)
                     .multilineTextAlignment(.center)
