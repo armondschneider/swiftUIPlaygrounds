@@ -11,6 +11,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 10) {
+                // Button Views
+                Button(action: {}) {
+                    NavigationLink(destination: ButtonShowcaseView()) {
+                        Text("Buttons")
+                            .padding()
+                            .fontWeight(.bold)
+                            .frame(maxWidth: 280)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                }
                 
                 // ImageInteractionView
                 Button(action: {}) {
@@ -38,21 +50,8 @@ struct ContentView: View {
                     }
                 }
                 
-                // RealisticDropShadowView
-                Button(action: {}) {
-                    NavigationLink(destination: RealisticDropShadowView()) {
-                        Text("Realistic Drop Shadow View")
-                            .padding()
-                            .fontWeight(.bold)
-                            .frame(maxWidth: 280)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                    }
-                }
-                
                 Link("Just some fun interactions made by Armond Schneider",
-                      destination: URL(string: "https://www.threads.net/@armondme")!)
+                      destination: URL(string: "https://github.com/armondschneider")!)
                     .multilineTextAlignment(.center)
                 
                 .padding()
